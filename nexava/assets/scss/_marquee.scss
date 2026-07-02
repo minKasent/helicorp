@@ -1,0 +1,168 @@
+.scrolling-wrap {
+	overflow: hidden;
+	white-space: nowrap;
+	display: flex;
+	gap: 20px;
+
+	.comm {
+		display: flex;
+		align-items: center;
+		animation: scroll 60s linear infinite;
+		gap: 30px;
+		cursor: pointer;
+
+		.cmn-textslide {
+			font-size: 36px;
+			font-weight: 700;
+			line-height: 95px;
+			text-transform: uppercase;
+            color: $white;
+            font-family: $heading-font;
+            letter-spacing: 1.44px;
+
+            &.text-custom-storke {
+                -webkit-text-stroke: 1px $white;
+                -webkit-text-fill-color: transparent;
+            }
+		}
+		
+
+	}
+
+	&:hover {
+		.comm {
+			animation-play-state: paused;
+		}
+	}
+
+	@include breakpoint (max-xxl) {
+		.comm {
+			gap: 20px;
+		}
+	}
+
+	@include breakpoint (max-lg) {
+		gap: 14px;
+		.comm {
+			gap: 14px;
+			.cmn-textslide {
+				font-size: 48px;
+			}
+			img {
+				width: 50px;
+				object-fit: contain;
+			}
+		}
+	}
+
+	@include breakpoint (max-sm) {
+		.comm {
+			gap: 12px;
+			.cmn-textslide {
+				font-size: 36px;
+			}
+			img {
+				width: 50px;
+				object-fit: contain;
+			}
+		}
+	}
+}
+
+.mycustom-marque {
+    background-color: $theme-color;
+    padding: 0 145px;
+
+	@include breakpoint (max-xxxl){
+		padding: 0 50px;
+	}
+
+	@include breakpoint (max-xl){
+		padding: 0 30px;
+	}
+
+	&.style-2 {
+		padding: 0;
+		background-color: transparent;
+		margin-bottom: -20px;
+
+		.scrolling-wrap {
+		
+			.comm {
+				.cmn-textslide {
+					font-size: 80px;
+					font-weight: 700;
+					line-height: 95px;
+					text-transform: uppercase;
+					color: $text-color;
+					letter-spacing: 3.2px;
+					font-family: $body-font;
+		
+					&.text-custom-storke {
+						-webkit-text-stroke: 1px $text-color;
+						-webkit-text-fill-color: transparent;
+					}
+				}
+				
+		
+			}
+		
+			&:hover {
+				.comm {
+					animation-play-state: paused;
+				}
+			}
+		
+			@include breakpoint (max-xxl) {
+				.comm {
+					gap: 20px;
+				}
+			}
+		
+			@include breakpoint (max-lg) {
+				gap: 14px;
+				.comm {
+					gap: 14px;
+					.cmn-textslide {
+						font-size: 48px;
+					}
+					img {
+						width: 50px;
+						object-fit: contain;
+					}
+				}
+			}
+		
+			@include breakpoint (max-sm) {
+				.comm {
+					gap: 12px;
+					.cmn-textslide {
+						font-size: 36px;
+					}
+					img {
+						width: 50px;
+						object-fit: contain;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+@keyframes scroll2 {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-200%);
+	}
+}

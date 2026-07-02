@@ -1,0 +1,193 @@
+.cta-contact-wrapper {
+    background-color: $theme-color;
+    padding: 44px 63px;
+
+    @include breakpoint (max-md){
+        padding: 40px 30px;
+    }
+
+    .cta-contact-content {
+        h3 {
+            -webkit-text-stroke: 1px $white;
+            -webkit-text-fill-color: transparent;
+            font-size: 60px;
+            font-weight: 500;
+            line-height: 1;
+
+            @include breakpoint (max-xl){
+                font-size: 50px;
+            }
+
+            @include breakpoint (max-md){
+                font-size: 40px;
+            }
+        }
+    }
+
+    .contact-into-items {
+        .form-clt {
+            input {
+                outline: none;
+                border: none;
+                background-color: $white;
+                color: $text-color;
+                width: 100%;
+                padding: 19px 30px;
+                line-height: 1;
+
+                &::placeholder {
+                    color: $text-color;
+                }
+            }
+        }
+
+        .theme-btn {
+            background-color: $header-color;
+            width: 100%;
+
+            &::after {
+                background-color: $white;
+            }
+
+            &:hover {
+                background-color: $white;
+                color: $header-color;
+            }
+        }
+    }
+}
+
+.cta-contact-section {
+    position: relative;
+
+    &::before {
+        @include before;
+        background-color: $bg-color;
+        top: 35%;
+        z-index: -1;
+    }
+
+    &.style-2 {
+        &::before {
+            top: 50%;
+        }
+    }
+}
+
+.vedio-section {
+    position: relative;
+    background-attachment: fixed;
+    
+    &::before {
+       @include before;
+        background: linear-gradient(0deg, rgba(16, 32, 57, 0.60) 0%, rgba(16, 32, 57, 0.60) 100%);
+    }
+
+    .vedio-icon {
+        padding: 120px 0px;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+
+        @include breakpoint (max-md){
+            padding: 80px 0;
+        }
+
+        .video-btn {
+            width: 140px;
+            height: 140px;
+            line-height: 140px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 16px;
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 600;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.40);
+        }
+    }
+}
+
+.instagram-wrapper {
+
+    h3 {
+        margin-bottom: 50px;
+        margin-top: -9px;
+
+    }
+
+    .instagram-banner-items {
+        .banner-image {
+            position: relative;
+    
+            @include breakpoint (max-md){
+                height: 450px;
+    
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            img {
+                @include imgw;
+            }
+    
+            @include breakpoint (max-sm){
+                height: 380px;
+            }
+    
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                content: "";
+                background: #385469;
+                opacity: 0.6;
+                transform: scale(1, 0);
+                transition: transform 500ms ease;
+                transform-origin: bottom center;
+                z-index: 1;
+            }
+    
+            .icon {
+                position: absolute;
+                width: 68px;
+                height: 68px;
+                line-height: 68px;
+                text-align: center;
+                border-radius: 50%;
+                background-color: $theme-color;
+                font-size: 28px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 99;
+                color: $white;
+                opacity: 0;
+                @include transition;
+            }
+        }
+    
+        &:hover {
+            .banner-image {
+                &::before {
+                    transform: scale(1, 1);
+                    transform-origin: top center;
+                }
+                .icon {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.counter-section {
+    &.style-2 {
+        margin-top: 90px;
+    }
+}

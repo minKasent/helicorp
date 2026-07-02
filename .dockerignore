@@ -1,0 +1,9 @@
+.git
+_reports
+_tmp
+__pycache__
+.lighthouseci
+node_modules
+npm-debug.log*
+HELICORP - ĐỀ BÀI VÒNG 2 - TTS IT PHÁT TRIỂN WEBSITE.pdf
+_dev_php_server.py
