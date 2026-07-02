@@ -9,7 +9,7 @@
                             <img class="helicorp-logo logo-light" src="assets/img/helicorp/2025_07_HeLiCorp-W-bg-300x49.png" width="300" height="49" alt="HELICORP">
                         </a>
                     </div>
-                    <div class="offcanvas__close"><button type="button" aria-label="Close menu">Close</button></div>
+                    <div class="offcanvas__close"><button type="button" aria-label="Close menu">x</button></div>
                 </div>
                 <p class="text d-none d-xl-block">
                     HELICORP is a market expansion partner for smart pet technology brands in Vietnam.
